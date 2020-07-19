@@ -42,7 +42,7 @@ object KafkaStatus  {
 } 
 
 object JMXFromLocal {
-  var jmxPeer = "msc-kfk0a.tbd.wixprod.net:9999"
+  var jmxPeer = "localhost:9999"
   val jmxUrl = new JMXServiceURL("service:jmx:rmi:///jndi/rmi://%s/jmxrmi".format(jmxPeer))
   val jmxc = JMXConnectorFactory.connect(jmxUrl, null)
   val connection = jmxc.getMBeanServerConnection
